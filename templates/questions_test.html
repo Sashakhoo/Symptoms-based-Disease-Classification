@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Possibly NCD Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href= "{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+  <link href= "{{ url_for('static',filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href= "{{ url_for('static',filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href= "{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href= "{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href= "{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href= "{{ url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href= "{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href= "{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.6.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    
+
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">Regna</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index_test.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index_test.html #contact">Closest Hospital</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Symptoms Checker</h2>
+          <ol>
+            <li><a href="index_test.html">Home</a></li>
+            <li>Symptoms Checker</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page pt-4">
+      <div class="container">
+        <div class="row justify-content-center">
+
+        <!--Questions-->
+        <!--10-->
+        <!--<div class="col-md-auto">-->
+        <form action = "{{url_for('predict')}}" method ="POST" >
+        <div id="questions">
+          <label style="font-weight: 650;">1. Are you experiencing Polyuria? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">2. Are you experiencing Polydypsia? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;"> 3. Are you experiencing Chest Pain? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">4. Are you experiencing Nausea? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">5. Are you experiencing Unresponsiveness? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">6. Are you experiencing Vertigo? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;"> 
+            <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">7. Are you experiencing Vomitting? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions" >
+          <label style="font-weight: 650;">8. Are you experiencing Labored Breathing? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">9. Are you experiencing Dysarthria? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">10. Are you experiencing Asthenia? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <!--20-->
+        <div id="questions">
+          <label style="font-weight: 650;">11. Are you experiencing Slurred Speech? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault10" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault10" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">12. Are you experiencing Facial Paresis? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault11" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault11" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">13. Are you experiencing Hemiplegia? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">14. Are you experiencing Seizure? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault13" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault13" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">15. Are you experiencing Numbness? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault14" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault14" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">16. Are you experiencing Shortness of Breath? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault15" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault15" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">17. Are you experiencing Wheezing? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault16" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault16" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">18. Are you experiencing Coughing? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault17" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault17" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">19. Are you experiencing Dyspnea? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault18" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault18" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">20. Are you experiencing Hypercapnia? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault19" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault19" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">21. Are you experiencing Chest Tightness? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault20" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault20" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <!--30-->
+        <div id="questions">
+          <label style="font-weight: 650;">22. Are you experiencing Mass of Body Structure? </label>
+          <div class="form-check" style="margin-left: 20px;"> 
+            <input class="form-check-input" type="radio" name="flexRadioDefault21" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault21" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">23. Are you experiencing Pain? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault22" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault22" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">24. Are you experiencing Lesion? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault23" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault23" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">25. Are you experiencing Thicken? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault24" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault24" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">26. Are you experiencing Decreased Body Weight? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault25" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault25" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">27. Are you experiencing Hoarseness? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault26" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault26" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">28. Are you experiencing General Discomfort? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault27" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault27" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">29. Are you experiencing Metastatic Lesion? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault28" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault28" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">30. Are you experiencing Paresthesia? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault29" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault29" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">31. Are you experiencing Orthopnea? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault30" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault30" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <!--40-->
+        <div id="questions">
+          <label style="font-weight: 650;">32. Are you experiencing Fatigue? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+        
+        <div id="questions">
+          <label style="font-weight: 650;">33. Are you experiencing Jugular Venous Distention? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault32" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault32" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">34. Are you experiencing Hypotension? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault33" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault33" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">35. Are you experiencing Angina Pectoris? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault34" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault34" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">36. Are you experiencing Drooling? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault35" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault35" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">37. Are you experiencing Agitation? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault36" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault36" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">38. Are you experiencing Frail? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault37" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault37" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">39. Are you experiencing Tremor Resting? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault38" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault38" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">40. Are you experiencing Groggy? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault39" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault39" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">41. Are you experiencing Muscle Twitch? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault40" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault40" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <!--50-->
+        <div id="questions">
+          <label style="font-weight: 650;">42. Are you experiencing Tremor? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault41" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault41" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">43. Are you experiencing Out of Breath? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault42" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault42" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">44. Are you experiencing Unhappy? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault43" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault43" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">45. Are you feeling Hot or Feverish? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault44" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault44" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">46. Are you experiencing Auditory Hallucinations? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault45" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault45" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">47. Are you experiencing Irritable Mood? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault46" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault46" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">48. Are you feeling Suicidal? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault47" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault47" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">49. Are you experiencing Sleeplessness? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault48" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault48" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions" >
+          <label style="font-weight: 650;">50. Are you experiencing Unconscious State? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault49" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault49" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions">
+          <label style="font-weight: 650;">51. Are you experiencing Panic? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault50" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault50" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+        </div>
+
+        <div id="questions" >
+          <label style="font-weight: 650;">52. Are you experiencing Breath Sounds Decreased? </label>
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault51" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check" style="margin-left: 20px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault51" id="flexRadioDefault2" value="0">
+            <label class="form-check-label" for="flexRadioDefault2">
+              No
+            </label>
+          </div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        
+
+        <!-- Button trigger modal -->
+<div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Launch Demo Modal">
+					  </div>
+
+<div id ="result">
+							<strong style="color:red">{{result}}</strong>
+					 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="test-close" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <p></p> <!--Gap between bottom bar with questions-->
+        </div>
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Possibly</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

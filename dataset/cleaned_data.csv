@@ -1,0 +1,59 @@
+diabetes,polyuria,1421.0
+diabetes,polydypsia,1421.0
+diabetes,pain chest,1421.0
+diabetes,nausea,1421.0
+diabetes,unresponsiveness,1421.0
+diabetes,vertigo,1421.0
+diabetes,vomiting,1421.0
+diabetes,labored breathing,1421.0
+accident cerebrovascular,dysarthria,885.0
+accident cerebrovascular,asthenia,885.0
+accident cerebrovascular,speech slurred,885.0
+accident cerebrovascular,facial paresis,885.0
+accident cerebrovascular,hemiplegia,885.0
+accident cerebrovascular,unresponsiveness,885.0
+accident cerebrovascular,seizure,885.0
+accident cerebrovascular,numbness,885.0
+chronic obstructive airway disease,shortness of breath,524.0
+chronic obstructive airway disease,wheezing,524.0
+chronic obstructive airway disease,cough,524.0
+chronic obstructive airway disease,dyspnea,524.0
+chronic obstructive airway disease,hypercapnia,524.0
+chronic obstructive airway disease,chest tightness,524.0
+carcinoma,mass of body structure,269.0
+carcinoma,pain,269.0
+carcinoma,lesion,269.0
+carcinoma,thicken,269.0
+carcinoma,decreased body weight,269.0
+carcinoma,hoarseness,269.0
+carcinoma,general discomfort,269.0
+carcinoma,metastatic lesion,269.0
+carcinoma,paresthesia,269.0
+failure heart,orthopnea,138.0
+failure heart,fatigue,138.0
+failure heart,dyspnea,138.0
+failure heart,shortness of breath,138.0
+failure heart,jugular venous distention,138.0
+failure heart,hypotension,138.0
+failure heart,angina pectoris,138.0
+Alzheimer's disease,drool,101.0
+Alzheimer's disease,agitation,101.0
+Alzheimer's disease,frail,101.0
+Alzheimer's disease,tremor resting,101.0
+Alzheimer's disease,facial paresis,101.0
+Alzheimer's disease,groggy,101.0
+Alzheimer's disease,muscle twitch,101.0
+Alzheimer's disease,tremor,101.0
+obesity morbid,out of breath,76.0
+obesity morbid,cough,76.0
+obesity morbid,unhappy,76.0
+obesity morbid,wheezing,76.0
+obesity morbid,feels hot/feverish,76.0
+chronic alcoholic intoxication,tremor,70.0
+chronic alcoholic intoxication,hallucinations auditory,70.0
+chronic alcoholic intoxication,irritable mood,70.0
+chronic alcoholic intoxication,feeling suicidal,70.0
+chronic alcoholic intoxication,sleeplessness,70.0
+chronic alcoholic intoxication,unconscious state,70.0
+chronic alcoholic intoxication,panic,70.0
+chronic alcoholic intoxication,breath sounds decreased,70.0

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questions</title>
+</head>
+<body>
+<div class="container">
+			<br>
+			<!--Form-->
+			<form action = "{{url_for('predict')}}" method ="POST" >
+				<fieldset>
+				<legend>Questionnaire</legend><br>
+				  <div class="card card-body" >
+					  <div class="form-group  row">
+						<div class="col-sm-3">
+							<label for="shortness">Do you have shortness of breath?</label><br>
+							<input type="radio" class="form-control" id="shortness" name="shortness" value="1" required>
+              <label for = "yes1">YES</label>
+              <input type="radio" class="form-control" id="shortness" name="shortness" value="0" required>
+              <label for = "no1">NO</label>
+						</div>
+            <br>
+						<div class="col-sm-3">
+							<label for="dizzy">Do you feel dizzy often?</label> <br>
+							<input type="radio" class="form-control" id="dizzy" name="dizzy" value="1" required>
+              <label for = "yes2">YES</label>
+              <input type="radio" class="form-control" id="dizzy" name="dizzy" value="0" required>
+              <label for = "no2">NO</label>
+					   </div>
+					  </div>
+					  <br>
+        </fieldset>
+			</form>
+			
+		</div>
+
+<br>
+					  <div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Result">
+					  </div>
+
+<!--Prediction Result-->
+					  <div id ="result">
+							<strong style="color:red">{{result}}</strong>
+					 </div>
+</body>
+</html>
